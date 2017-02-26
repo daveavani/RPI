@@ -34,3 +34,9 @@ similarly just change the example name and compile and run it
 Some troubleshooting 
 ====================
 #sudo modeprobe bcm2835-v4l2  //to resolve  Capture from CAM 0 didn't work
+
+
+
+https://github.com/opencv/opencv
+https://github.com/opencv/opencv/blob/master/samples/cpp/tutorial_code/TrackingMotion/cornerDetector_Demo.cpp
+https://github.com/ptiszai/FusionTwoCamerasFrames
