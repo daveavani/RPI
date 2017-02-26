@@ -27,4 +27,10 @@ run cpp samples
 #cd /opencv-3.1.0/samples/cpp
 #g++ $(pkg-config --libs --cflags opencv) -o facedetect facedetect.cpp //samples cpp codes compiling and running 
 #./facedetect
+
+similarly just change the example name and compile and run it 
+
+
+Some troubleshooting 
+====================
 #sudo modeprobe bcm2835-v4l2  //to resolve  Capture from CAM 0 didn't work
