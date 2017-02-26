@@ -1,0 +1,30 @@
+
+
+Steps tO install Opencv3.1.0 on rpi3 
+====================================
+use the github : https://gist.github.com/willprice/c216fcbeba8d14ad1138
+download the install.sh script and run it (wait for good 2-3 hours and then you are done)
+
+After installation do some house keeping 
+========================================
+#sudo nano /etc/bash.bashrc
+//add following two lines at the end of the  file -after fi
+PKG_CONFIG PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH
+
+#mkdir /etc/ld.so.conf.d/
+#vi opencv.conf
+add following line to the file 
+/usr/local.lib
+
+check the camera function 
+=========================
+#raspivid -o test.h264 -t 2500 //for video capture from camera
+#raspistill -t 5000 //for stills 
+
+run cpp samples 
+===============
+#cd /opencv-3.1.0/samples/cpp
+#g++ $(pkg-config --libs --cflags opencv) -o facedetect facedetect.cpp //samples cpp codes compiling and running 
+#./facedetect
+#sudo modeprobe bcm2835-v4l2  //to resolve  Capture from CAM 0 didn't work
